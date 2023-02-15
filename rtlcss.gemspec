@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/rtlcss_wrapper/version"
+require_relative "lib/rtlcss/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "rtlcss_wrapper"
-  spec.version = RtlcssWrapper::VERSION
+  spec.name = "rtlcss"
+  spec.version = Rtlcss::VERSION
   spec.authors = ["OsamaSayegh"]
   spec.email = ["team@discourse.org"]
 
   spec.summary = "A wrapper around the rtlcss npm package to flip CSS direction in Ruby"
   spec.description = spec.summary
-  spec.homepage = "https://github.com/discourse/rtlcss_wrapper"
+  spec.homepage = "https://github.com/discourse/rtlcss"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.7"
 

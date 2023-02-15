@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in rtlcss_wrapper.gemspec
+# Specify your gem's dependencies in rtlcss.gemspec
 gemspec
