@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "rtlcss_wrapper/version"
+require_relative "rtlcss/version"
 require "mini_racer"
 
-module RtlcssWrapper
+module Rtlcss
   class FlipError < StandardError; end
 
   def self.flip_css(orig_css)

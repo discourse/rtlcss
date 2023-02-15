@@ -2,13 +2,13 @@
 
 require "test_helper"
 
-class TestRtlcssWrapper < Minitest::Test
+class TestRtlcss < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::RtlcssWrapper::VERSION
+    refute_nil ::Rtlcss::VERSION
   end
 
   def test_it_flips_css_correctly
-    flipped = RtlcssWrapper.flip_css(<<~CSS)
+    flipped = Rtlcss.flip_css(<<~CSS)
       a {
         right: 100px;
         margin-left: 50px;
@@ -35,13 +35,13 @@ class TestRtlcssWrapper < Minitest::Test
   end
 
   def test_it_raises_for_invalid_css
-    error = assert_raises(RtlcssWrapper::FlipError) do
-      RtlcssWrapper.flip_css(<<~CSS)
+    error = assert_raises(Rtlcss::FlipError) do
+      Rtlcss.flip_css(<<~CSS)
         a {
           right: 100px;
       CSS
     end
-    assert_instance_of(RtlcssWrapper::FlipError, error)
+    assert_instance_of(Rtlcss::FlipError, error)
     assert_match(/CssSyntaxError/, error.cause.message)
   end
 end
