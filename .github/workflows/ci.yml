@@ -41,6 +41,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Workaround bug in github actions
+        run: |
+          # see https://github.com/actions/runner-images/issues/6775
+          git config --global --add safe.directory /github/workspace
+
       - name: Release Gem
         uses: discourse/publish-rubygems-action@v2
         env:
